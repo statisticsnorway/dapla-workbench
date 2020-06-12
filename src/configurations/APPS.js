@@ -73,12 +73,12 @@ export const APPS = (environment) => [
   },
   {
     progress: 0,
-    name: 'react-reference-app',
-    url: `https://react-reference-app.${environment}-bip-app.ssb.no`,
-    repository: 'https://github.com/statisticsnorway/react-reference-app',
+    name: 'JupyterHub',
+    url: `https://jupyter.${environment}-bip-app.ssb.no`,
+    repository: 'https://github.com/statisticsnorway/dapla-gcp-jupyter',
     description: {
-      en: 'This application and its documentation should be used as a reference when creating new React applications that you want to deploy to BIP.',
-      nb: 'Denne applikasjonen med tilhørende dokumentasjon skal brukes som en referanse når man lager nye React applikasjoner som skal rulles ut på BIP.'
+      en: '',
+      nb: ''
     },
     functionalities: []
   }
