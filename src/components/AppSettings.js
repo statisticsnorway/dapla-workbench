@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 import { Container, Divider, Header, Icon, List, Modal, Segment } from 'semantic-ui-react'
+import { SSB_COLORS, SSB_STYLE } from '@statisticsnorway/dapla-js-utilities'
 
 import { LanguageContext } from '../utilities'
-import { SSB_COLORS, SSB_STYLE } from '../configurations'
 import { SETTINGS } from '../enums'
 
 function AppSettings ({ open, setSettingsOpen }) {

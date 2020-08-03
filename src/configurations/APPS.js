@@ -61,8 +61,8 @@ export const APPS = (environment) => [
     url: `https://lds-client.${environment}-bip-app.ssb.no`,
     repository: 'https://github.com/statisticsnorway/linked-data-store-client',
     description: {
-      en: 'An application that works as an interface against the objectmodel stored in Linked Data Store.',
-      nb: 'Denne applikasjonen tilbyr et grensesnitt mot objektmodellen som er lagret i Linked Data Store.'
+      en: 'An application that works as an interface against the objectmodel stored in Linked Data Store. This application is to be phased out and replaced by dapla-metadata-explorer.',
+      nb: 'Denne applikasjonen tilbyr et grensesnitt mot objektmodellen som er lagret i Linked Data Store. Applikasjonen skal fases ut og byttes ut med dapla-metadata-explorer.'
     },
     functionalities: [
       {

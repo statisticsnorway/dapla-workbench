@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-
-import { LANGUAGE } from '../enums'
+import { LANGUAGE } from '@statisticsnorway/dapla-js-utilities'
 
 export const LanguageContext = React.createContext(LANGUAGE.LANGUAGES.NORWEGIAN.languageCode)
 
@@ -9,7 +8,7 @@ export const AppContextProvider = (props) => {
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>
-        {props.children}
+      {props.children}
     </LanguageContext.Provider>
   )
 }

@@ -1,36 +1,12 @@
-import React, { useContext, useEffect, useState } from 'react'
-import useAxios from 'axios-hooks'
+import React, { useContext } from 'react'
 import { Card, Divider, Grid, Header, Icon, List } from 'semantic-ui-react'
+import { InfoPopup, SSB_COLORS } from '@statisticsnorway/dapla-js-utilities'
 
 import { LanguageContext } from '../utilities'
-import { API, infoPopup, SSB_COLORS } from '../configurations'
 import { UI } from '../enums'
 
 function AppCard ({ app }) {
   const { language } = useContext(LanguageContext)
-
-  const [health, setHealth] = useState(0)
-
-  const [{ loading, error, response }] = useAxios(`${app.url}${API.GET_HEALTH}`)
-
-  useEffect(() => {
-    if (!loading && !error && response) {
-      setHealth(response.status)
-    }
-
-    if (!loading && error) {
-      try {
-        setHealth(error.response.status)
-      } catch (e) {
-        console.log(e)
-        try {
-          setHealth(error)
-        } catch (e) {
-          console.log(e)
-        }
-      }
-    }
-  }, [error, loading, response])
 
   return (
     <Card raised fluid>
@@ -56,26 +32,17 @@ function AppCard ({ app }) {
       </Card.Content>
       <Card.Content extra>
         <Grid columns='equal'>
-          <Grid.Column>
-            {loading ? <Icon loading size='large' name='sync alternate' style={{ color: SSB_COLORS.BLUE }} /> :
-              <>
-                <Icon
-                  size='large'
-                  name={health === 0 ? 'question' : health === 200 ? 'check' : 'exclamation triangle'}
-                  style={{ color: health === 0 ? SSB_COLORS.BLUE : health === 200 ? SSB_COLORS.GREEN : SSB_COLORS.RED }}
-                />
-                {`(${health})`}
-              </>
-            }
-          </Grid.Column>
+          <Grid.Column />
           <Grid.Column textAlign='right'>
-            {infoPopup(
-              UI.GO_TO_APP[language],
-              <a href={`${app.url}`} target='_blank' rel='noopener noreferrer'>
-                <Icon link size='large' name='external' style={{ color: SSB_COLORS.BLUE }} />
-              </a>,
-              'bottom right'
-            )}
+            <InfoPopup
+              position='bottom right'
+              text={UI.GO_TO_APP[language]}
+              trigger={
+                <a href={`${app.url}`} target='_blank' rel='noopener noreferrer'>
+                  <Icon link size='large' name='external' style={{ color: SSB_COLORS.BLUE }} />
+                </a>
+              }
+            />
           </Grid.Column>
         </Grid>
       </Card.Content>
