@@ -5,7 +5,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/statisticsnorway/dapla-workbench.git"
+    "url": "https://github.com/statisticsnorway/dapla-workbench"
   },
   "author": "Statistics Norway",
   "license": "Apache-2.0",
