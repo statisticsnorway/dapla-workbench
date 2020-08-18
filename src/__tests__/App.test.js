@@ -1,28 +1,32 @@
 import React from 'react'
-import { render } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { MemoryRouter } from 'react-router-dom'
+import { render } from '@testing-library/react'
 import { LANGUAGE } from '@statisticsnorway/dapla-js-utilities'
 
 import App from '../App'
-import { AppContextProvider } from '../utilities'
+import { AppContextProvider } from '../context/AppContext'
 import { TEST_CONFIGURATIONS } from '../configurations'
-import { SETTINGS, TEST_IDS, UI } from '../enums'
+import { SIDEBAR_NAVIGATION, UI } from '../enums'
 
 jest.mock('../components/AppHome', () => () => null)
+jest.mock('../components/AppSettings', () => () => null)
 
 const { language, otherLanguage } = TEST_CONFIGURATIONS
 
 const setup = () => {
-  const { getByTestId, getByText } = render(
+  const { getAllByText, getByText } = render(
     <AppContextProvider>
-      <App />
+      <MemoryRouter initialEntries={['/']}>
+        <App />
+      </MemoryRouter>
     </AppContextProvider>
   )
 
-  return { getByTestId, getByText }
+  return { getAllByText, getByText }
 }
 
-test('Renders basics', () => {
+test('Does not crash', () => {
   const { getByText } = setup()
 
   expect(getByText(UI.HEADER[language])).toBeInTheDocument()
@@ -36,10 +40,10 @@ test('Change language works correctly', () => {
   expect(getByText(UI.HEADER[otherLanguage])).toBeInTheDocument()
 })
 
-test('Opens settings', () => {
-  const { getByTestId, getByText } = setup()
+test('Navigation works correctly', () => {
+  const { getAllByText, getByText } = setup()
 
-  userEvent.click(getByTestId(TEST_IDS.ACCESS_SETTINGS_BUTTON))
+  userEvent.click(getByText(SIDEBAR_NAVIGATION.VARIABLE_SEARCH[language]))
 
-  expect(getByText(SETTINGS.HEADER[language])).toBeInTheDocument()
+  expect(getAllByText(SIDEBAR_NAVIGATION.VARIABLE_SEARCH[language]).length).toBe(2)
 })
