@@ -1,7 +1,11 @@
 export const SETTINGS = {
-  API: {
-    en: 'API service',
-    nb: 'API-tjeneste'
+  CONCEPT_LDS_API: {
+    en: 'Concept LDS',
+    nb: 'Concept LDS'
+  },
+  EXPLORATION_LDS_API: {
+    en: 'Exploration LDS',
+    nb: 'Exploration LDS'
   },
   APPLY: {
     en: 'Apply',
@@ -18,10 +22,6 @@ export const SETTINGS = {
   HEADER: {
     en: 'Settings',
     nb: 'Innstillinger'
-  },
-  LOOKS_GOOD: {
-    en: 'Everything looks good!',
-    nb: 'Alt ser bra ut!'
   },
   RESET_VALUES: {
     en: 'Reset to default values',

@@ -10,7 +10,7 @@ import { TEST_CONFIGURATIONS } from '../configurations'
 import { SIDEBAR_NAVIGATION, UI } from '../enums'
 
 jest.mock('../components/AppHome', () => () => null)
-jest.mock('../components/AppSettings', () => () => null)
+jest.mock('../components/settings/AppSettings', () => () => null)
 
 const { language, otherLanguage } = TEST_CONFIGURATIONS
 
