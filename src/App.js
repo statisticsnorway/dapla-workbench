@@ -1,10 +1,16 @@
-import React, { useRef, useState } from 'react'
+import React, { useContext, useRef, useState } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import { Menu, Ref, Segment, Sidebar, Sticky } from 'semantic-ui-react'
+import { VariableSearch } from '@statisticsnorway/dapla-variable-search'
+
+import { ApiContext, LanguageContext } from './context/AppContext'
 import { AppHome, AppSettings, AppSideMenu, AppTopMenu } from './components'
 import { ROUTING } from './configurations'
 
 function App () {
+  const { URLS } = useContext(ApiContext)
+  const { language } = useContext(LanguageContext)
+
   const appRefArea = useRef()
 
   const [settingsOpen, setSettingsOpen] = useState(false)
@@ -40,7 +46,7 @@ function App () {
             <Segment basic>
               <Switch>
                 <Route path={ROUTING.VARIABLE_SEARCH}>
-
+                  <VariableSearch restApi={URLS.EXPLORATION_LDS} language={language} />
                 </Route>
                 <Route path={ROUTING.HOME}>
                   <AppHome />

@@ -42,6 +42,10 @@ function ApiSettings ({ api, applySettings, defaults, setApplySettings, setDefau
       SET_URLS[api](apiUrl)
       setApplySettings(false)
       setSettingsEdited(false)
+
+      if (api === 'EXPLORATION_LDS') {
+        SET_URLS['EXPLORATION_GRAPHQL'](`${apiUrl}${API.GRAPHQL}`)
+      }
     }
   }, [api, apiUrl, execute, applySettings, SET_URLS, setApplySettings])
 

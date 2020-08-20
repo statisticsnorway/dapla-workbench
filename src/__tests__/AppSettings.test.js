@@ -9,7 +9,7 @@ import { TEST_CONFIGURATIONS } from '../configurations'
 import { SETTINGS, TEST_IDS } from '../enums'
 
 const { alternativeApi, errorString, language } = TEST_CONFIGURATIONS
-const apiContext = TEST_CONFIGURATIONS.apiContext(jest.fn(), jest.fn())
+const apiContext = TEST_CONFIGURATIONS.apiContext(jest.fn(), jest.fn(), jest.fn())
 const execute = jest.fn()
 
 const setup = () => {
