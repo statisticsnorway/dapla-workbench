@@ -1,15 +1,18 @@
 import { LANGUAGE } from '@statisticsnorway/dapla-js-utilities'
+import { API } from './API'
 
 export const TEST_CONFIGURATIONS = {
   alternativeApi: 'http://localhost:29999',
-  apiContext: (fnSetConceptLDS, fnSetExplorationLDS) => ({
+  apiContext: (fnSetConceptLDS, fnSetExplorationLDS, fnSetExplorationGraphql) => ({
     URLS: {
       CONCEPT_LDS: process.env.REACT_APP_CONCEPT_LDS,
-      EXPLORATION_LDS: process.env.REACT_APP_EXPLORATION_LDS
+      EXPLORATION_LDS: process.env.REACT_APP_EXPLORATION_LDS,
+      EXPLORATION_GRAPHQL: `${process.env.REACT_APP_EXPLORATION_LDS}${API.GRAPHQL}`
     },
     SET_URLS: {
       CONCEPT_LDS: fnSetConceptLDS,
-      EXPLORATION_LDS: fnSetExplorationLDS
+      EXPLORATION_LDS: fnSetExplorationLDS,
+      EXPLORATION_GRAPHQL: fnSetExplorationGraphql
     }
   }),
   errorString: 'A problem occured',
