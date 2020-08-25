@@ -1,4 +1,8 @@
 export const SETTINGS = {
+  CATALOG_SERVICE_API: {
+    en: 'Catalog Service',
+    nb: 'Katalogtjeneste'
+  },
   CONCEPT_LDS_API: {
     en: 'Concept LDS',
     nb: 'Concept LDS'

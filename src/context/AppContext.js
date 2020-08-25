@@ -7,6 +7,7 @@ import { API } from '../configurations'
 export const ApiContext = React.createContext({
   CONCEPT_LDS: process.env.REACT_APP_CONCEPT_LDS,
   EXPLORATION_LDS: process.env.REACT_APP_EXPLORATION_LDS,
+  CATALOG_SERVICE: process.env.REACT_APP_CATALOG_SERVICE,
   EXPLORATION_GRAPHQL: `${process.env.REACT_APP_EXPLORATION_LDS}${API.GRAPHQL}`
 })
 
@@ -16,6 +17,7 @@ export const AppContextProvider = (props) => {
   const [conceptLDS, setConceptLDS] = useState(process.env.REACT_APP_CONCEPT_LDS)
   const [language, setLanguage] = useState(LANGUAGE.LANGUAGES.NORWEGIAN.languageCode)
   const [explorationLDS, setExplorationLDS] = useState(process.env.REACT_APP_EXPLORATION_LDS)
+  const [catalogService, setCatalogService] = useState(process.env.REACT_APP_CATALOG_SERVICE)
   const [explorationGraphql, setExplorationGraphql] = useState(`${process.env.REACT_APP_EXPLORATION_LDS}${API.GRAPHQL}`)
 
   const graphqlClient = new GraphQLClient({ url: `${explorationGraphql}` })
@@ -27,11 +29,13 @@ export const AppContextProvider = (props) => {
           URLS: {
             CONCEPT_LDS: conceptLDS,
             EXPLORATION_LDS: explorationLDS,
+            CATALOG_SERVICE: catalogService,
             EXPLORATION_GRAPHQL: explorationGraphql
           },
           SET_URLS: {
             CONCEPT_LDS: setConceptLDS,
             EXPLORATION_LDS: setExplorationLDS,
+            CATALOG_SERVICE: setCatalogService,
             EXPLORATION_GRAPHQL: setExplorationGraphql
           }
         }}

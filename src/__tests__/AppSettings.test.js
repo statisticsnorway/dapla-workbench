@@ -9,7 +9,7 @@ import { TEST_CONFIGURATIONS } from '../configurations'
 import { SETTINGS, TEST_IDS } from '../enums'
 
 const { alternativeApi, errorString, language } = TEST_CONFIGURATIONS
-const apiContext = TEST_CONFIGURATIONS.apiContext(jest.fn(), jest.fn(), jest.fn())
+const apiContext = TEST_CONFIGURATIONS.apiContext(jest.fn(), jest.fn(), jest.fn(), jest.fn())
 const execute = jest.fn()
 
 const setup = () => {
@@ -32,6 +32,7 @@ describe('Common mock', () => {
 
     expect(getByPlaceholderText(SETTINGS.CONCEPT_LDS_API[language])).toHaveValue(apiContext.URLS.CONCEPT_LDS)
     expect(getByPlaceholderText(SETTINGS.EXPLORATION_LDS_API[language])).toHaveValue(apiContext.URLS.EXPLORATION_LDS)
+    expect(getByPlaceholderText(SETTINGS.CATALOG_SERVICE_API[language])).toHaveValue(apiContext.URLS.CATALOG_SERVICE)
   })
 
   test('Editing values works correctly', async () => {
@@ -59,6 +60,7 @@ describe('Common mock', () => {
 
 test('Shows error when there is a problem with an API', () => {
   useAxios.mockReturnValueOnce([{ error: errorString, loading: false }, execute])
+  useAxios.mockReturnValueOnce([{ error: undefined, loading: false }, execute])
   useAxios.mockReturnValueOnce([{ error: undefined, loading: false }, execute])
 
   const { getByText } = setup()

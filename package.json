@@ -1,6 +1,6 @@
 {
   "name": "dapla-workbench",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "",
   "private": true,
   "repository": {
@@ -16,6 +16,7 @@
     }
   ],
   "dependencies": {
+    "@statisticsnorway/dapla-catalog-viewer": "^0.1.0",
     "@statisticsnorway/dapla-js-utilities": "^0.1.1",
     "@statisticsnorway/dapla-variable-search": "^0.2.0",
     "axios": "^0.20.0",
