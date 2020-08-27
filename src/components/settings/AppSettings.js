@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { Fragment, useContext, useState } from 'react'
 import { Button, Container, Divider, Grid, Header, Icon, List, Modal, Segment } from 'semantic-ui-react'
 import { InfoPopup, SSB_COLORS, SSB_STYLE } from '@statisticsnorway/dapla-js-utilities'
 
@@ -19,21 +19,18 @@ function AppSettings ({ open, setOpen }) {
         {SETTINGS.HEADER[language]}
       </Header>
       <Modal.Content as={Segment} basic style={SSB_STYLE}>
-        <ApiSettings
-          api='CONCEPT_LDS'
-          defaults={defaults}
-          setDefaults={setDefaults}
-          applySettings={applySettings}
-          setApplySettings={setApplySettings}
-        />
-        <Divider hidden />
-        <ApiSettings
-          defaults={defaults}
-          api='EXPLORATION_LDS'
-          setDefaults={setDefaults}
-          applySettings={applySettings}
-          setApplySettings={setApplySettings}
-        />
+        {['CONCEPT_LDS', 'EXPLORATION_LDS', 'CATALOG_SERVICE'].map(serviceApi =>
+          <Fragment key={serviceApi}>
+            <ApiSettings
+              api={serviceApi}
+              defaults={defaults}
+              setDefaults={setDefaults}
+              applySettings={applySettings}
+              setApplySettings={setApplySettings}
+            />
+            <Divider hidden />
+          </Fragment>
+        )}
         <Container style={{ marginTop: '1rem' }}>
           <Divider hidden />
           <Grid columns='equal'>

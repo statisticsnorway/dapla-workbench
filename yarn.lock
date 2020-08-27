@@ -1420,6 +1420,25 @@
     exenv "^1.2.2"
     prop-types "^15.6.2"
 
+"@statisticsnorway/dapla-catalog-viewer@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@statisticsnorway/dapla-catalog-viewer/-/dapla-catalog-viewer-0.1.0.tgz#7991db6fb15997ff8aa4dedc811b967f516575d5"
+  integrity sha512-Jxu/Oh3MEpH+fUy/AhzOHO6KEtmytt/XrDAI47AesE8O1OA9KXvHVR/V41Ud4O7hC99XcZ/M61kRc82Fdwo81A==
+  dependencies:
+    "@statisticsnorway/dapla-js-utilities" "^0.1.0"
+    axios "^0.20.0"
+    axios-hooks "^2.0.0"
+    react "^16.13.1"
+    react-dom "^16.13.1"
+    react-scripts "3.4.0"
+    semantic-ui-css "^2.4.0"
+    semantic-ui-react "^1.0.0"
+
+"@statisticsnorway/dapla-js-utilities@^0.1.0":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@statisticsnorway/dapla-js-utilities/-/dapla-js-utilities-0.1.2.tgz#66ee206a8f4a4276733244a7f187a4d7c9418552"
+  integrity sha512-jfAFOdCQHFE4KdpaBEmE47CBDN4iAA31vBKoJA4Q3B2UQGulp3oYrgfzWe6FI+j4r0NsZApm7yB84SOFdmf1DA==
+
 "@statisticsnorway/dapla-js-utilities@^0.1.1":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@statisticsnorway/dapla-js-utilities/-/dapla-js-utilities-0.1.1.tgz#cf78ef36da3c9cef6fc31403b98e0d20e5a3cdcb"
@@ -9531,7 +9550,7 @@ selfsigned@^1.10.7:
   dependencies:
     node-forge "0.9.0"
 
-semantic-ui-css@^2.4.1:
+semantic-ui-css@^2.4.0, semantic-ui-css@^2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/semantic-ui-css/-/semantic-ui-css-2.4.1.tgz#f5aea39fafb787cbd905ec724272a3f9cba9004a"
   integrity sha512-Pkp0p9oWOxlH0kODx7qFpIRYpK1T4WJOO4lNnpNPOoWKCrYsfHqYSKgk5fHfQtnWnsAKy7nLJMW02bgDWWFZFg==
