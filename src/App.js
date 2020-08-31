@@ -54,6 +54,7 @@ function App () {
             appSidebarVisible={appSidebarVisible}
             setActiveSidebarItem={setActiveSidebarItem}
             setAppSidebarVisible={setAppSidebarVisible}
+            context={appRefArea}
           />
           <Ref innerRef={appRefArea}>
             <Segment basic>
