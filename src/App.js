@@ -49,12 +49,12 @@ function App () {
         </Sticky>
         <Sidebar.Pusher>
           <AppTopMenu
+            context={appRefArea}
             setSettingsOpen={setSettingsOpen}
             activeSidebarItem={activeSidebarItem}
             appSidebarVisible={appSidebarVisible}
             setActiveSidebarItem={setActiveSidebarItem}
             setAppSidebarVisible={setAppSidebarVisible}
-            context={appRefArea}
           />
           <Ref innerRef={appRefArea}>
             <Segment basic>
