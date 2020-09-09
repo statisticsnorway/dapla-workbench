@@ -1432,9 +1432,9 @@
     prop-types "^15.6.2"
 
 "@statisticsnorway/dapla-catalog-viewer@^0.1.0":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@statisticsnorway/dapla-catalog-viewer/-/dapla-catalog-viewer-0.1.1.tgz#a99e21c2f1a8c0956239a2ca4ae24f9a5402f106"
-  integrity sha512-g0veAKzyOS51qSWbAQwpKKK3UmpgRUQH8/ZXXuQzILcaBE1UTq9umhOHYknyQuNKH9SIBR/s4UgwVGHRtWWWSQ==
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@statisticsnorway/dapla-catalog-viewer/-/dapla-catalog-viewer-0.1.2.tgz#420c0b7559d71f95d9a431c95415a79155885ec3"
+  integrity sha512-MsB8UpYn7WFjJcNJiNDcMt6C6V/yR//mrjeWeY1dKaekfF9om9CpZNf8DdHG+JhZTNJNK+9eU8i0INVgdmY7Ow==
   dependencies:
     "@statisticsnorway/dapla-js-utilities" "^0.1.0"
     axios "^0.20.0"
