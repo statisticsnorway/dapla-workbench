@@ -1,9 +1,5 @@
 export const EXTERNAL_SERVICES = environment => [
   {
-    name: 'variable-search',
-    url: `https://variable-search.${environment}-bip-app.ssb.no`
-  },
-  {
     name: 'user-access-admin',
     url: `https://user-access-admin.${environment}-bip-app.ssb.no`
   },
