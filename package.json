@@ -1,7 +1,7 @@
 {
   "name": "dapla-workbench",
-  "version": "0.2.2",
-  "description": "",
+  "version": "0.2.3",
+  "description": "Statistics Norway Dataplatform Workbench",
   "private": true,
   "repository": {
     "type": "git",
@@ -30,8 +30,9 @@
     "semantic-ui-react": "^1.1.0"
   },
   "scripts": {
+    "prestart": "react-env --dest ./public",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && react-env --dest ./build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "coverage": "react-scripts test --coverage --watchAll=false"
@@ -52,6 +53,7 @@
     ]
   },
   "devDependencies": {
+    "@beam-australia/react-env": "^2.1.2",
     "@testing-library/jest-dom": "^5.9.0",
     "@testing-library/react": "^11.0.1",
     "@testing-library/user-event": "^12.0.11"
