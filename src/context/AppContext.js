@@ -5,20 +5,20 @@ import { LANGUAGE } from '@statisticsnorway/dapla-js-utilities'
 import { API } from '../configurations'
 
 export const ApiContext = React.createContext({
-  CONCEPT_LDS: process.env.REACT_APP_CONCEPT_LDS,
-  EXPLORATION_LDS: process.env.REACT_APP_EXPLORATION_LDS,
-  CATALOG_SERVICE: process.env.REACT_APP_CATALOG_SERVICE,
-  EXPLORATION_GRAPHQL: `${process.env.REACT_APP_EXPLORATION_LDS}${API.GRAPHQL}`
+  CONCEPT_LDS: window._env.REACT_APP_CONCEPT_LDS,
+  EXPLORATION_LDS: window._env.REACT_APP_EXPLORATION_LDS,
+  CATALOG_SERVICE: window._env.REACT_APP_CATALOG_SERVICE,
+  EXPLORATION_GRAPHQL: `${window._env.REACT_APP_EXPLORATION_LDS}${API.GRAPHQL}`
 })
 
 export const LanguageContext = React.createContext(LANGUAGE.LANGUAGES.NORWEGIAN.languageCode)
 
 export const AppContextProvider = (props) => {
-  const [conceptLDS, setConceptLDS] = useState(process.env.REACT_APP_CONCEPT_LDS)
+  const [conceptLDS, setConceptLDS] = useState(window._env.REACT_APP_CONCEPT_LDS)
   const [language, setLanguage] = useState(LANGUAGE.LANGUAGES.NORWEGIAN.languageCode)
-  const [explorationLDS, setExplorationLDS] = useState(process.env.REACT_APP_EXPLORATION_LDS)
-  const [catalogService, setCatalogService] = useState(process.env.REACT_APP_CATALOG_SERVICE)
-  const [explorationGraphql, setExplorationGraphql] = useState(`${process.env.REACT_APP_EXPLORATION_LDS}${API.GRAPHQL}`)
+  const [explorationLDS, setExplorationLDS] = useState(window._env.REACT_APP_EXPLORATION_LDS)
+  const [catalogService, setCatalogService] = useState(window._env.REACT_APP_CATALOG_SERVICE)
+  const [explorationGraphql, setExplorationGraphql] = useState(`${window._env.REACT_APP_EXPLORATION_LDS}${API.GRAPHQL}`)
 
   const graphqlClient = new GraphQLClient({ url: `${explorationGraphql}` })
 

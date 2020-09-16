@@ -32,7 +32,7 @@ function ApiSettings ({ api, applySettings, defaults, setApplySettings, setDefau
     if (defaults) {
       setDefaults(false)
       setSettingsEdited(true)
-      setApiUrl(process.env['REACT_APP_' + api])
+      setApiUrl(window._env['REACT_APP_' + api])
     }
   }, [api, defaults, setDefaults])
 
