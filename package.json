@@ -1,6 +1,6 @@
 {
   "name": "dapla-workbench",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Statistics Norway Dataplatform Workbench",
   "private": true,
   "repository": {
@@ -18,16 +18,16 @@
   "dependencies": {
     "@statisticsnorway/dapla-catalog-viewer": "^0.1.0",
     "@statisticsnorway/dapla-js-utilities": "^0.1.1",
-    "@statisticsnorway/dapla-variable-search": "^0.3.0",
+    "@statisticsnorway/dapla-variable-search": "^0.4.0",
     "axios": "^0.20.0",
     "axios-hooks": "^2.0.0",
-    "graphql-hooks": "^4.5.0",
+    "graphql-hooks": "^5.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.0",
     "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^1.1.0"
+    "semantic-ui-react": "^2.0.0"
   },
   "scripts": {
     "prestart": "react-env --dest ./public",
