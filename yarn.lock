@@ -1473,10 +1473,10 @@
     semantic-ui-css "^2.4.1"
     semantic-ui-react "^1.0.0"
 
-"@statisticsnorway/dapla-variable-search@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/@statisticsnorway/dapla-variable-search/-/dapla-variable-search-0.4.1.tgz#2e07b2706ff44cf1777755e88dac1d871664bf04"
-  integrity sha512-AnsDs3hz5VGb5mlQX2X7FtVlxPuoXc+wq6s/HghhB+Tlv9A/bijPUZtK2/UxeaPZu9L9z2qFvANQS6iCDS16/w==
+"@statisticsnorway/dapla-variable-search@^0.4.2":
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/@statisticsnorway/dapla-variable-search/-/dapla-variable-search-0.4.2.tgz#8075a626eb175fcdd8da6e2ab091a2125dd41605"
+  integrity sha512-alR9kF08SSHYMXk+aNKTUaqFsDtoq/eXsfmSDhHz3YZZXlcvXlOxYOnmjElVKSk/sxKTNOam7H8om5/r2DsBpA==
   dependencies:
     "@statisticsnorway/dapla-js-utilities" "^0.1.1"
     axios "^0.20.0"
