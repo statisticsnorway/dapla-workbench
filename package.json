@@ -18,7 +18,7 @@
   "dependencies": {
     "@statisticsnorway/dapla-catalog-viewer": "^0.1.0",
     "@statisticsnorway/dapla-js-utilities": "^0.1.1",
-    "@statisticsnorway/dapla-variable-search": "^0.4.1",
+    "@statisticsnorway/dapla-variable-search": "^0.4.2",
     "axios": "^0.20.0",
     "axios-hooks": "^2.0.0",
     "graphql-hooks": "^5.0.0",
