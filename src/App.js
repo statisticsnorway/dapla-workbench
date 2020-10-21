@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from 'react'
 import { Route, Switch, useLocation } from 'react-router-dom'
 import { Menu, Ref, Segment, Sidebar, Sticky } from 'semantic-ui-react'
 import { CatalogViewer } from '@statisticsnorway/dapla-catalog-viewer'
+import { LineageViewer } from '@statisticsnorway/dapla-lineage-viewer'
 import { VariableSearch } from '@statisticsnorway/dapla-variable-search'
 
 import { ApiContext, LanguageContext } from './context/AppContext'
@@ -63,7 +64,10 @@ function App () {
                   <CatalogViewer restApi={URLS.CATALOG_SERVICE} language={language} />
                 </Route>
                 <Route path={ROUTING.VARIABLE_SEARCH}>
-                  <VariableSearch restApi={URLS.EXPLORATION_LDS} language={language} />
+                  <VariableSearch lineageUrl={window._env.REACT_APP_LINEAGE} language={language} />
+                </Route>
+                <Route path={ROUTING.LINEAGE_VIEWER}>
+                  <LineageViewer restApi={URLS.EXPLORATION_LDS} language={language} />
                 </Route>
                 <Route path={ROUTING.HOME}>
                   <AppHome />
