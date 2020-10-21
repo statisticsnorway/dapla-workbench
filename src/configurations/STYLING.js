@@ -12,5 +12,9 @@ export const SIDEBAR_NAVIGATION_STYLE = {
   VARIABLE_SEARCH: {
     icon: 'search',
     color: SSB_COLORS.BLUE
+  },
+  LINEAGE_VIEWER: {
+    icon: 'code branch',
+    color: SSB_COLORS.PURPLE
   }
 }

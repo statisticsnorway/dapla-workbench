@@ -20,5 +20,6 @@ export const EXTERNAL_SERVICES = environment => [
 export const ROUTING = {
   HOME: '/',
   CATALOG_VIEWER: '/catalog-viewer',
-  VARIABLE_SEARCH: '/variable-search'
+  VARIABLE_SEARCH: '/variable-search',
+  LINEAGE_VIEWER: '/lineage'
 }
