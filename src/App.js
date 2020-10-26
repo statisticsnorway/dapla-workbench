@@ -45,7 +45,11 @@ function App () {
             visible={appSidebarVisible}
             onHide={() => setAppSidebarVisible(false)}
           >
-            <AppSideMenu activeSidebarItem={activeSidebarItem} setActiveSidebarItem={setActiveSidebarItem} />
+            <AppSideMenu
+              activeSidebarItem={activeSidebarItem}
+              setActiveSidebarItem={setActiveSidebarItem}
+              setAppSidebarVisible={setAppSidebarVisible}
+            />
           </Sidebar>
         </Sticky>
         <Sidebar.Pusher>
