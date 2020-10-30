@@ -1,6 +1,6 @@
 {
   "name": "dapla-workbench",
-  "version": "0.2.9",
+  "version": "0.3.0",
   "description": "Statistics Norway Dataplatform Workbench",
   "repository": {
     "type": "git",
@@ -15,21 +15,21 @@
     }
   ],
   "dependencies": {
-    "@statisticsnorway/dapla-catalog-viewer": "^0.1.0",
-    "@statisticsnorway/dapla-js-utilities": "^0.1.1",
-    "@statisticsnorway/dapla-lineage-viewer": "^0.1.0",
-    "@statisticsnorway/dapla-variable-search": "^0.4.2",
-    "axios": "^0.20.0",
+    "@statisticsnorway/dapla-catalog-viewer": "^0.2.0",
+    "@statisticsnorway/dapla-js-utilities": "^0.2.0",
+    "@statisticsnorway/dapla-lineage-viewer": "^0.2.0",
+    "@statisticsnorway/dapla-variable-search": "^0.5.0",
+    "axios": "^0.21.0",
     "axios-hooks": "^2.0.0",
     "color-hash": "^1.0.3",
     "d3": "^5.16.0",
     "d3-shape": "^2.0.0",
     "graphql-hooks": "^5.0.0",
-    "react": "^16.13.1",
+    "react": "^17.0.1",
     "react-d3-graph": "^2.5.0",
-    "react-dom": "^16.13.1",
+    "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.0",
+    "react-scripts": "4.0.0",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.0"
   },
@@ -38,7 +38,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build && react-env --dest ./build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "coverage": "react-scripts test --coverage --watchAll=false"
   },
   "eslintConfig": {
