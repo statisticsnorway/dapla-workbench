@@ -2,9 +2,9 @@ import React, { Fragment, useContext, useState } from 'react'
 import { Button, Container, Divider, Grid, Header, Icon, Modal, Segment } from 'semantic-ui-react'
 import { InfoPopup, SimpleFooter, SSB_COLORS, SSB_STYLE } from '@statisticsnorway/dapla-js-utilities'
 
+import ApiSettings from './ApiSettings'
 import { LanguageContext } from '../../context/AppContext'
 import { SETTINGS, TEST_IDS } from '../../enums'
-import ApiSettings from './ApiSettings'
 
 function AppSettings ({ open, setOpen }) {
   const { language } = useContext(LanguageContext)
@@ -60,13 +60,12 @@ function AppSettings ({ open, setOpen }) {
           </Grid>
         </Container>
       </Modal.Content>
-      <Segment basic>
-        <SimpleFooter
-          language={language}
-          appVersion={process.env.REACT_APP_VERSION}
-          sourceUrl={process.env.REACT_APP_SOURCE_URL}
-        />
-      </Segment>
+      <SimpleFooter
+        language={language}
+        showScrollToTop={false}
+        appVersion={process.env.REACT_APP_VERSION}
+        sourceUrl={process.env.REACT_APP_SOURCE_URL}
+      />
     </Modal>
   )
 }

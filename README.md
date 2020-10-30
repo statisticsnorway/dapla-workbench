@@ -4,8 +4,8 @@
 This project aggregates Statistics Norway Dataplatform frontend resources into a common web page to access them easily. 
 
 ### References (so-far)
-* [variable-search](https://github.com/statisticsnorway/variable-search) (integrated)
-* [user-access-admin](https://github.com/statisticsnorway/user-access-admin) (external)
+* [dapla-variable-search](https://github.com/statisticsnorway/dapla-variable-search) (integrated)
+* [dapla-user-access-admin](https://github.com/statisticsnorway/dapla-user-access-admin) (external)
 * [dapla-lineage-viewer](https://github.com/statisticsnorway/dapla-lineage-viewer) (integrated)
 * [dapla-catalog-viewer](https://github.com/statisticsnorway/dapla-catalog-viewer) (integrated)
 * [dapla-metadata-explorer](https://github.com/statisticsnorway/dapla-metadata-explorer) (external)

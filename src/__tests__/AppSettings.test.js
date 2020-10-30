@@ -16,7 +16,7 @@ const setup = () => {
   const { getByPlaceholderText, getByTestId, getByText } = render(
     <ApiContext.Provider value={apiContext}>
       <LanguageContext.Provider value={{ language: language }}>
-        <AppSettings open={true} setSettingsOpen={jest.fn()} />
+        <AppSettings open={true} setOpen={jest.fn()} />
       </LanguageContext.Provider>
     </ApiContext.Provider>
   )
@@ -25,7 +25,9 @@ const setup = () => {
 }
 
 describe('Common mock', () => {
-  useAxios.mockReturnValue([{ error: undefined, loading: false }, execute])
+  beforeEach(() => {
+    useAxios.mockReturnValue([{ error: undefined, loading: false }, execute])
+  })
 
   test('Renders correctly', () => {
     const { getByPlaceholderText } = setup()
@@ -43,6 +45,14 @@ describe('Common mock', () => {
     expect(getByText(SETTINGS.EDITED_VALUES[language])).toBeInTheDocument()
 
     userEvent.click(getByText(SETTINGS.APPLY[language]))
+
+    expect(apiContext.SET_URLS.CONCEPT_LDS).toHaveBeenCalled()
+  })
+
+  test('Pressing enter edits values and fires apply', async () => {
+    const { getByPlaceholderText } = setup()
+
+    await userEvent.type(getByPlaceholderText(SETTINGS.CONCEPT_LDS_API[language]), `${alternativeApi}{enter}`)
 
     expect(apiContext.SET_URLS.CONCEPT_LDS).toHaveBeenCalled()
   })
