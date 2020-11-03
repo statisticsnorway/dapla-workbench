@@ -7,7 +7,7 @@ import { VariableSearch } from '@statisticsnorway/dapla-variable-search'
 
 import { ApiContext, LanguageContext } from './context/AppContext'
 import { AppHome, AppSettings, AppSideMenu, AppTopMenu } from './components'
-import { ROUTING } from './configurations'
+import { API, ROUTING } from './configurations'
 
 function App () {
   const { pathname } = useLocation()
@@ -21,7 +21,7 @@ function App () {
   const [appSidebarVisible, setAppSidebarVisible] = useState(false)
 
   useEffect(() => {
-    if (pathname !== '/') {
+    if (pathname !== '/' && !API.SERVER_ENDPOINTS.includes(pathname)) {
       const currentPath = Object.entries(ROUTING).filter((value) => value[1] === pathname)
 
       if (currentPath.length <= 1) {
