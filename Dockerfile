@@ -8,6 +8,7 @@ COPY .env docker-entrypoint.sh /var/
 COPY /build /usr/share/nginx/html
 
 EXPOSE 80
+EXPOSE 81
 
 ENTRYPOINT ["sh", "/var/docker-entrypoint.sh"]
 
