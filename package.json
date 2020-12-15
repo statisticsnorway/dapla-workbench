@@ -1,6 +1,6 @@
 {
   "name": "dapla-workbench",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Statistics Norway Dataplatform Workbench",
   "repository": {
     "type": "git",
@@ -29,7 +29,7 @@
     "react-d3-graph": "^2.5.0",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.0",
+    "react-scripts": "4.0.1",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.0"
   },
