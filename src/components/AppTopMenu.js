@@ -6,7 +6,14 @@ import AppNavigation from './AppNavigation'
 import { LanguageContext } from '../context/AppContext'
 import { UI } from '../enums'
 
-function AppTopMenu ({ activeSidebarItem, appSidebarVisible, setActiveSidebarItem, setAppSidebarVisible, setSettingsOpen, context }) {
+function AppTopMenu ({
+  activeSidebarItem,
+  appSidebarVisible,
+  setActiveSidebarItem,
+  setAppSidebarVisible,
+  setSettingsOpen,
+  context
+}) {
   const { language, setLanguage } = useContext(LanguageContext)
 
   const [menuIsStuck, setMenuIsStuck] = useState(false)
