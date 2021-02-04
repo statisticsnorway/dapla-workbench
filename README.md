@@ -9,6 +9,7 @@ This project aggregates Statistics Norway Dataplatform frontend resources into a
 * [dapla-lineage-viewer](https://github.com/statisticsnorway/dapla-lineage-viewer) (integrated)
 * [dapla-catalog-viewer](https://github.com/statisticsnorway/dapla-catalog-viewer) (integrated)
 * [dapla-metadata-explorer](https://github.com/statisticsnorway/dapla-metadata-explorer) (external)
+* [dapla-metadata-webview](https://github.com/statisticsnorway/dapla-metadata-webview) (external)
 * JupyterHub (external)
 
 ### Try this application locally
