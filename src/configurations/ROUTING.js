@@ -8,6 +8,10 @@ export const EXTERNAL_SERVICES = environment => [
     url: `https://metadata-explorer.${environment}-bip-app.ssb.no`
   },
   {
+    name: 'dapla-metadata-webview',
+    url: `https://dapla-metadata-webview.${environment}-bip-app.ssb.no`
+  },
+  {
     name: 'JupyterHub',
     url: `https://jupyter.${environment}-bip-app.ssb.no`
   }
