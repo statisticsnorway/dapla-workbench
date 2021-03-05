@@ -68,7 +68,7 @@ function App () {
                   <CatalogViewer restApi={URLS.CATALOG_SERVICE} language={language} />
                 </Route>
                 <Route path={ROUTING.VARIABLE_SEARCH}>
-                  <VariableSearch lineageUrl={window._env.REACT_APP_LINEAGE} language={language} />
+                  <VariableSearch lineageUrl={window.__ENV.REACT_APP_LINEAGE} language={language} />
                 </Route>
                 <Route path={ROUTING.LINEAGE_VIEWER}>
                   <LineageViewer restApi={URLS.EXPLORATION_LDS} language={language} />

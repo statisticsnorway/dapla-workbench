@@ -34,7 +34,7 @@ function AppSideMenu ({ activeSidebarItem, setActiveSidebarItem, setAppSidebarVi
       <Menu.Item>
         <Menu.Header as={Header} size='medium' content={UI.SIDEBAR_SERVICES_HEADER[language]} />
       </Menu.Item>
-      {EXTERNAL_SERVICES(window._env.REACT_APP_ENV).map(({ name, url }) =>
+      {EXTERNAL_SERVICES(window.__ENV.REACT_APP_ENV).map(({ name, url }) =>
         <Menu.Item key={name}>
           <a href={url} target='_blank' rel='noopener noreferrer'>
             {name}
