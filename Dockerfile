@@ -7,8 +7,8 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY .env docker-entrypoint.sh /var/
 COPY /build /usr/share/nginx/html
 
-EXPOSE 80
-EXPOSE 81
+EXPOSE 8180
+EXPOSE 8181
 
 ENTRYPOINT ["sh", "/var/docker-entrypoint.sh"]
 
