@@ -1,4 +1,2 @@
-export { API } from './API'
-export { EXTERNAL_SERVICES, ROUTING } from './ROUTING'
-export { SIDEBAR_NAVIGATION_STYLE } from './STYLING'
+export { EXTERNAL_SERVICES } from './ROUTING'
 export { TEST_CONFIGURATIONS } from './TEST'
