@@ -1,7 +1,7 @@
 {
   "name": "dapla-workbench",
-  "version": "0.3.8",
-  "description": "Statistics Norway Dataplatform Workbench",
+  "version": "0.4.0",
+  "description": "Statistics Norway Data Platform Workbench",
   "repository": {
     "type": "git",
     "url": "https://github.com/statisticsnorway/dapla-workbench"
@@ -15,20 +15,9 @@
     }
   ],
   "dependencies": {
-    "@statisticsnorway/dapla-catalog-viewer": "^0.2.0",
     "@statisticsnorway/dapla-js-utilities": "^0.2.0",
-    "@statisticsnorway/dapla-lineage-viewer": "^0.2.0",
-    "@statisticsnorway/dapla-variable-search": "^0.5.0",
-    "axios": "^0.21.0",
-    "axios-hooks": "^2.0.0",
-    "color-hash": "^1.0.3",
-    "d3": "^5.16.0",
-    "d3-shape": "^2.0.0",
-    "graphql-hooks": "^5.0.0",
     "react": "^17.0.1",
-    "react-d3-graph": "^2.5.0",
     "react-dom": "^17.0.1",
-    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.0"
@@ -72,7 +61,7 @@
     ],
     "coverageThreshold": {
       "global": {
-        "branches": 75,
+        "branches": 50,
         "functions": 75,
         "lines": 75,
         "statements": 75

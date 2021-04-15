@@ -2,15 +2,13 @@
 
 [![Build Status](https://dev.azure.com/statisticsnorway/Dapla/_apis/build/status/statisticsnorway.dapla-workbench?branchName=master)](https://dev.azure.com/statisticsnorway/Dapla/_build/latest?definitionId=20&branchName=master)
 
-This project aggregates Statistics Norway Dataplatform frontend resources into a common web page to access them easily.
+This project aggregates Statistics Norway Data Platform frontend resources into a common web page to access them easily.
 
 ### References (so-far)
 
-* [dapla-variable-search](https://github.com/statisticsnorway/dapla-variable-search) (integrated)
 * [dapla-user-access-admin](https://github.com/statisticsnorway/dapla-user-access-admin) (external)
-* [dapla-lineage-viewer](https://github.com/statisticsnorway/dapla-lineage-viewer) (integrated)
-* [dapla-catalog-viewer](https://github.com/statisticsnorway/dapla-catalog-viewer) (integrated)
 * [dapla-metadata-explorer](https://github.com/statisticsnorway/dapla-metadata-explorer) (external)
+* [dapla-migration-webclient](https://github.com/statisticsnorway/dapla-migration-webclient) (external)
 * [dapla-metadata-webview](https://github.com/statisticsnorway/dapla-metadata-webview) (external)
 * JupyterHub (external)
 
@@ -30,7 +28,3 @@ Run `yarn start` and navigate to `http://localhost:3000/`.
     * Alternatively with custom environment
       variables: `docker run -p 8000-8001:8180-8181 -e REACT_APP_ENV=staging dapla-workbench:latest`
 * Navigate to `http://localhost:8000/` for app or `http://localhost:8001/metrics` for metrics
-
-**Note** that this application
-requires [dapla-project (localstack)](https://github.com/statisticsnorway/dapla-project/blob/master/localstack/README.md)
-running to function locally.

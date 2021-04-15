@@ -1,19 +1,18 @@
-import React, { useContext, useState } from 'react'
-import { Dropdown, Header, Icon, Image, Menu, Sticky } from 'semantic-ui-react'
-import { LANGUAGE, SSB_COLORS, ssb_logo_no_text_rgb, ssb_logo_rgb } from '@statisticsnorway/dapla-js-utilities'
+import { useContext, useState } from 'react'
+import { Dropdown, Header, Image, Menu, Sticky } from 'semantic-ui-react'
+import {
+  dapla_long_rgb,
+  dapla_short_rgb,
+  LANGUAGE,
+  SSB_COLORS,
+  ssb_logo_no_text_rgb,
+  ssb_logo_rgb
+} from '@statisticsnorway/dapla-js-utilities'
 
-import AppNavigation from './AppNavigation'
 import { LanguageContext } from '../context/AppContext'
 import { UI } from '../enums'
 
-function AppTopMenu ({
-  activeSidebarItem,
-  appSidebarVisible,
-  setActiveSidebarItem,
-  setAppSidebarVisible,
-  setSettingsOpen,
-  context
-}) {
+function AppTopMenu ({ context }) {
   const { language, setLanguage } = useContext(LanguageContext)
 
   const [menuIsStuck, setMenuIsStuck] = useState(false)
@@ -30,26 +29,16 @@ function AppTopMenu ({
           boxShadow: '0 1px 2px 0 rgba(34,36,38,.15)'
         }}
       >
-        <Menu.Item onClick={() => setAppSidebarVisible(!appSidebarVisible)}>
-          <Icon name='bars' size='large' />
+        <Menu.Item>
           <Image size={menuIsStuck ? 'mini' : 'medium'} src={menuIsStuck ? ssb_logo_no_text_rgb : ssb_logo_rgb} />
         </Menu.Item>
         <Menu.Item>
-          <Header size={menuIsStuck ? 'medium' : 'huge'}>
-            <Header.Content>
-              {UI.HEADER[language]}
-              <Header.Subheader>
-                <AppNavigation activeSidebarItem={activeSidebarItem} setActiveSidebarItem={setActiveSidebarItem} />
-              </Header.Subheader>
-            </Header.Content>
-          </Header>
+          <Image size={menuIsStuck ? 'mini' : 'tiny'} src={menuIsStuck ? dapla_short_rgb : dapla_long_rgb} />
         </Menu.Item>
-        <Menu.Menu position='right'>
-          <Menu.Item
-            style={{ color: SSB_COLORS.GREEN }}
-            onClick={() => setSettingsOpen(true)}
-            icon={{ name: 'setting', size: menuIsStuck ? 'large' : 'big' }}
-          />
+        <Menu.Item>
+          <Header size={menuIsStuck ? 'medium' : 'huge'} content={UI.HEADER[language]} />
+        </Menu.Item>
+        <Menu.Menu position="right">
           <Dropdown item text={`${LANGUAGE.LANGUAGE[language]} (${LANGUAGE.LANGUAGE_CHOICE[language]})`}>
             <Dropdown.Menu>
               {Object.keys(LANGUAGE.LANGUAGES).map(languageName =>

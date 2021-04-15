@@ -12,14 +12,11 @@ export const EXTERNAL_SERVICES = environment => [
     url: `https://dapla-metadata-webview.${environment}-bip-app.ssb.no`
   },
   {
+    name: 'dapla-migration-webclient',
+    url: `https://dapla-migration-webclient.${environment}-bip-app.ssb.no`
+  },
+  {
     name: 'JupyterHub',
     url: `https://jupyter.${environment}-bip-app.ssb.no`
   }
 ]
-
-export const ROUTING = {
-  HOME: '/',
-  CATALOG_VIEWER: '/catalog-viewer',
-  VARIABLE_SEARCH: '/variable-search',
-  LINEAGE_VIEWER: '/lineage'
-}
